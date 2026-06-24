@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Questions & Discussions
+    url: https://github.com/flowbaba/product/discussions
+    about: Ask questions and discuss ideas with the community before filing an issue.
+  - name: 🔒 Security Vulnerability
+    url: https://github.com/flowbaba/product/security/advisories/new
+    about: Report security issues privately. Do NOT open a public issue.

@@ -1,0 +1,58 @@
+name: 💰 Business / Commercial Request
+description: Customer commitment, partnership, contractual, or revenue-driven work item.
+title: "[Business] "
+labels: ["business", "needs-triage"]
+type: Task
+body:
+  - type: textarea
+    id: request
+    attributes:
+      label: Request summary
+      description: What is being asked for, by whom, and for what business reason?
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Customer commitment / contractual
+        - Sales / pre-sales blocker
+        - Partnership / integration
+        - Compliance / legal / security review
+        - Pricing / packaging
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: stakeholder
+    attributes:
+      label: Stakeholder / account
+      description: Customer, partner, or internal owner. Include deal size or ARR if relevant.
+    validations:
+      required: true
+  - type: input
+    id: deadline
+    attributes:
+      label: Deadline / commitment date
+      description: Is there a contractual or committed date? What happens if we miss it?
+    validations:
+      required: false
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Business priority
+      options:
+        - P0 — revenue at immediate risk
+        - P1 — committed, dated
+        - P2 — important, flexible timing
+        - P3 — opportunistic
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Business impact
+      description: Revenue, retention, or strategic impact of doing (or not doing) this.
+    validations:
+      required: false

@@ -1,0 +1,38 @@
+name: 💥 Product Feedback
+description: Share UX friction, confusion, or qualitative feedback on an existing feature.
+title: "[Feedback] "
+labels: ["feedback", "product"]
+type: Task
+body:
+  - type: input
+    id: area
+    attributes:
+      label: Product area
+      description: Which feature, page, or flow does this concern?
+    validations:
+      required: true
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Feedback
+      description: What's working, what's confusing, or what's frustrating? Be specific.
+    validations:
+      required: true
+  - type: dropdown
+    id: sentiment
+    attributes:
+      label: Sentiment
+      options:
+        - 🔴 Blocker — I cannot accomplish my goal
+        - 🟠 Friction — I can work around it, but it's painful
+        - 🟡 Suggestion — it works, but could be better
+        - 🟢 Praise — this is great, keep it
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: Where did this come from? (e.g., customer call, support ticket, user interview, internal)
+    validations:
+      required: false

@@ -1,0 +1,65 @@
+name: 🎯 Epic / Initiative
+description: A large body of product work spanning multiple issues. Links to a PRD.
+title: "[Epic] "
+labels: ["epic", "product", "needs-triage"]
+type: Feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for a body of work too big for a single feature request. Detailed scope belongs in a **PRD** (see `docs/templates/PRD.md`) — link it below.
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome / goal
+      description: What does success look like? State the user or business outcome, not the solution.
+    validations:
+      required: true
+  - type: input
+    id: prd
+    attributes:
+      label: PRD link
+      description: Link to the Product Requirements Doc for this epic.
+    validations:
+      required: false
+  - type: textarea
+    id: scope
+    attributes:
+      label: In scope
+      description: The key capabilities or milestones this epic covers.
+    validations:
+      required: true
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+      description: What this epic explicitly does NOT cover.
+    validations:
+      required: false
+  - type: textarea
+    id: children
+    attributes:
+      label: Child issues
+      description: Track the breakdown as a task list — GitHub will render progress.
+      value: |
+        - [ ] #
+        - [ ] #
+    validations:
+      required: false
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - P0 — now
+        - P1 — this quarter
+        - P2 — next quarter
+        - P3 — backlog
+    validations:
+      required: true
+  - type: input
+    id: target
+    attributes:
+      label: Target release / date
+    validations:
+      required: false

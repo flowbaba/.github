@@ -1,0 +1,125 @@
+name: 📋 PRD (Product Requirements)
+description: A living product spec — discussed in comments, edited in place, revisions visible via the issue's edit history.
+title: "[PRD] "
+labels: ["prd", "product", "needs-triage"]
+type: Feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This issue **is** the PRD. Discuss in the comments to reach consensus, and edit the body as it evolves — GitHub keeps the edit history. Link the tracking epic and child issues below.
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      options:
+        - Draft
+        - In Review
+        - Approved
+        - Shipped
+        - Parked
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: One paragraph — what we're building and why, in plain language.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What user/business problem are we solving, for whom, and how painful is it today? Cite evidence.
+    validations:
+      required: true
+  - type: textarea
+    id: goals
+    attributes:
+      label: Goals & non-goals
+      description: What this delivers, and what's explicitly out of scope for this release.
+      value: |
+        **Goals**
+        -
+
+        **Non-goals**
+        -
+    validations:
+      required: true
+  - type: textarea
+    id: metrics
+    attributes:
+      label: Success metrics
+      description: How we'll know it worked — metric, baseline, target.
+      value: |
+        | Metric | Baseline | Target |
+        |---|---|---|
+        |  |  |  |
+    validations:
+      required: true
+  - type: textarea
+    id: users
+    attributes:
+      label: Users & use cases
+      description: Primary persona(s) and top jobs-to-be-done.
+      placeholder: "As a <user>, I want <capability> so that <outcome>."
+    validations:
+      required: true
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requirements
+      description: Prioritized (Must / Should / Could / Won't).
+      value: |
+        | # | Requirement | Priority |
+        |---|---|---|
+        | R1 |  | Must |
+    validations:
+      required: true
+  - type: textarea
+    id: ux
+    attributes:
+      label: UX / design
+      description: Links to mockups, prototypes, flows. Note key states and edge cases.
+    validations:
+      required: false
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solution overview
+      description: High-level approach. Link a technical RFC for implementation detail rather than duplicating it.
+    validations:
+      required: false
+  - type: textarea
+    id: risks
+    attributes:
+      label: Dependencies & risks
+      value: |
+        | Dependency / risk | Owner | Mitigation |
+        |---|---|---|
+        |  |  |  |
+    validations:
+      required: false
+  - type: textarea
+    id: rollout
+    attributes:
+      label: Rollout plan
+      description: Phasing, flags, beta cohort, migration, rollback / kill switch.
+    validations:
+      required: false
+  - type: input
+    id: epic
+    attributes:
+      label: Tracking epic
+      description: The epic issue this PRD belongs to (e.g. #123).
+    validations:
+      required: false
+  - type: textarea
+    id: open-questions
+    attributes:
+      label: Open questions
+      value: |
+        - [ ]
+    validations:
+      required: false

@@ -1,0 +1,46 @@
+name: ✨ Feature Request
+description: Propose a new product capability or enhancement.
+title: "[Feature] "
+labels: ["feature", "product", "needs-triage"]
+type: Feature
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / user need
+      description: What user problem or unmet need does this solve? Who is affected?
+      placeholder: "As a <user>, I want <capability> so that <outcome>."
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the feature and how it should behave.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Other approaches or workarounds you've weighed, and why they fall short.
+    validations:
+      required: false
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Expected impact
+      options:
+        - Critical — blocks adoption or retention
+        - High — meaningful improvement for many users
+        - Medium — useful for a segment of users
+        - Low — nice to have
+    validations:
+      required: true
+  - type: textarea
+    id: success
+    attributes:
+      label: Success criteria
+      description: How will we know this worked? Metrics, signals, or acceptance criteria.
+    validations:
+      required: false

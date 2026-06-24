@@ -1,0 +1,37 @@
+name: 🛠️ Tech Debt / Refactor
+description: Propose a refactor, cleanup, or engineering improvement with no user-facing behavior change.
+title: "[Tech Debt] "
+labels: ["tech-debt", "engineering"]
+type: Task
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's the problem?
+      description: Describe the code smell, fragility, or maintenance burden. Link to the relevant files.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: What should the code look like instead, and why?
+    validations:
+      required: true
+  - type: dropdown
+    id: risk
+    attributes:
+      label: Risk / blast radius
+      options:
+        - Low — isolated, well-tested area
+        - Medium — touches shared code paths
+        - High — core or widely-depended-on code
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact if not addressed
+      description: What slows down, breaks, or gets riskier if we leave this as-is?
+    validations:
+      required: false
